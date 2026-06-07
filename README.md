@@ -1,2 +1,2 @@
-# csd-340
-CSD 340 Development with HTML and CSS
+# csd-402
+CSD 402 Development with HTML and CSS
