@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--
+        Name: Desarai Lofton
+        Assignment: Module 9.3
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+        var place = "Atlanta";
+        var goal = "software developer";
+        var hobby = "traveling";
+        var dream = "family";
+    </script>
+
+</head>
+
+<body>
+
+<h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+<p>
+One of my favorite places to visit is
+<span id="place">__________</span>.
+I enjoy spending time there because I get to relax and make memories with people I care about.
+</p>
+
+<button type="button"
+onclick="document.getElementById('place').innerHTML = place">
+Reveal Place
+</button>
+
+<br><br>
+
+<p>
+One of my biggest goals is to become a
+<span id="goal">__________</span>.
+Going back to school has helped me get closer to making that goal a reality.
+</p>
+
+<button type="button"
+onclick="document.getElementById('goal').innerHTML = goal">
+Reveal Goal
+</button>
+
+<br><br>
+
+<p>
+One thing I enjoy most is
+<span id="hobby">__________</span>.
+I enjoy seeing new places and experiencing different cultures.
+</p>
+
+<button type="button"
+onclick="document.getElementById('hobby').innerHTML = hobby">
+Reveal Hobby
+</button>
+
+<br><br>
+
+<p>
+In the future I hope to build a happy
+<span id="dream">__________</span>
+while continuing to grow personally and professionally.
+</p>
+
+<button type="button"
+onclick="document.getElementById('dream').innerHTML = dream">
+Reveal Dream
+</button>
+
+</body>
+
+</html>
