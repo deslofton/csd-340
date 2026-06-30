@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!--
+Name: Desarai Lofton
+Assignment: Module 11.2
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSD 340 Web Development with HTML and CSS</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:40px;
+    background:#f4f4f4;
+}
+
+h1{
+    color:#4F3674;
+}
+
+button{
+    margin:5px;
+    padding:8px 12px;
+}
+
+#output{
+    margin-top:20px;
+    border:1px solid #ccc;
+    background:white;
+    padding:15px;
+}
+
+</style>
+
+<script>
+
+let todo=[];
+
+function addItem(){
+
+let item=document.getElementById("item").value;
+
+if(item===""){
+    alert("Please enter a task.");
+    return;
+}
+
+todo.push(item);
+
+alert(item + " was added!");
+
+document.getElementById("item").value="";
+
+displayList();
+
+}
+
+function deleteItem(){
+
+if(todo.length===0){
+
+alert("Nothing to delete.");
+
+return;
+
+}
+
+let removed=todo.pop();
+
+alert(removed + " was deleted!");
+
+displayList();
+
+}
+
+function sortItems(){
+
+todo.sort();
+
+alert("Your list has been sorted.");
+
+displayList();
+
+}
+
+function displayList(){
+
+let text="<ol>";
+
+for(let i=0;i<todo.length;i++){
+
+text+="<li>"+todo[i]+"</li>";
+
+}
+
+text+="</ol>";
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+<p>
+Enter a task below and click <strong>Add</strong>.
+Use <strong>Sort</strong> to organize your list alphabetically.
+Use <strong>Delete Last Entry</strong> to remove the most recent item.
+</p>
+
+<input type="text" id="item">
+
+<button onclick="addItem()">Add</button>
+
+<button onclick="deleteItem()">Delete Last Entry</button>
+
+<button onclick="sortItems()">Sort</button>
+
+<div id="output"></div>
+
+</body>
+
+</html>
